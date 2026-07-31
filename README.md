@@ -13,6 +13,7 @@ A publicação preserva a privacidade do atleta, menor de idade.
 - Destaque trilíngue da final do Campeonato Municipal de Louveira, com o gol da vitória no último minuto, fotos do título e acesso ao vídeo.
 - Galeria trilíngue de atuação em campo com a Lite Soccer.
 - Seção trilíngue de preparação complementar com atletismo e treinamento específico para futebol.
+- Galeria trilíngue do período de treinos e observação com o Mislata CF.
 - Contato administrado exclusivamente pelo responsável legal.
 
 Campos e documentos ainda não confirmados permanecem ocultos no site público.

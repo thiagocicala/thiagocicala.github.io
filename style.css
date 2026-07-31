@@ -180,6 +180,10 @@ h1 strong { display: block; color: transparent; -webkit-text-stroke: 1px rgba(25
 
 .marcet-gallery { background: var(--paper); }
 .mic-gallery { background: var(--white); border-top: 1px solid var(--line); }
+.mislata-gallery { background: var(--navy); color: var(--white); border-top: 1px solid rgba(255, 255, 255, .14); }
+.mislata-gallery .section-intro.split > p { color: #b1bfd0; }
+.mislata-gallery .marcet-photo-featured img { object-position: center 48%; }
+.mislata-gallery .marcet-photo-team img { object-position: center 42%; }
 .lite-gallery { background: var(--paper); border-top: 1px solid var(--line); }
 .lite-gallery .marcet-photo-featured img { object-position: center 54%; }
 .lite-gallery .marcet-photo-wide img { object-position: center 58%; }
