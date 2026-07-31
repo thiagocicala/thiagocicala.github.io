@@ -130,6 +130,20 @@ h1 strong { display: block; color: transparent; -webkit-text-stroke: 1px rgba(25
 .button-dark-outline { border-color: var(--navy); color: var(--navy); }
 .button-dark-outline:hover { background: var(--navy); color: var(--white); }
 #gol-semifinal { scroll-margin-top: calc(var(--header-height) + 18px); }
+#gol-final { scroll-margin-top: calc(var(--header-height) + 18px); }
+
+.final-section { background: var(--navy); color: var(--white); }
+.final-section .section-intro.split > p { color: #b1bfd0; }
+.final-stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-bottom: 22px; border-top: 1px solid rgba(255, 255, 255, .34); border-bottom: 1px solid rgba(255, 255, 255, .18); }
+.final-stats div { min-height: 112px; display: flex; align-items: baseline; gap: 12px; padding: 24px 20px; border-right: 1px solid rgba(255, 255, 255, .18); }
+.final-stats div:last-child { border-right: 0; }
+.final-stats strong { color: #81aaff; font-size: clamp(32px, 4vw, 54px); line-height: 1; }
+.final-stats span { font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.final-gallery { margin-top: 0; }
+.final-gallery .marcet-photo-featured img { object-position: center 48%; }
+.final-gallery .marcet-photo-wide img, .final-gallery .marcet-photo-team img { object-position: center 46%; }
+.final-section .button-dark-outline { border-color: rgba(255, 255, 255, .5); color: var(--white); }
+.final-section .button-dark-outline:hover { border-color: var(--white); background: var(--white); color: var(--navy); }
 
 .qualities-section { background: var(--navy); color: var(--white); }
 .qualities { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255, 255, 255, .18); }
@@ -236,6 +250,9 @@ footer p, footer > a { color: #8294aa; font-size: 9px; letter-spacing: .1em; tex
   .semifinal-gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 245px; gap: 8px; }
   .semifinal-photo-featured { grid-column: 1 / -1; grid-row: auto; min-height: 390px; }
   .semifinal-photo-team { grid-column: 1 / -1; aspect-ratio: 3 / 2; }
+  .final-stats { grid-template-columns: 1fr; }
+  .final-stats div { min-height: 82px; border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, .18); }
+  .final-stats div:last-child { border-bottom: 0; }
 
   .qualities { grid-template-columns: 1fr; }
   .qualities article { min-height: 0; padding: 22px 4px 25px; border-right: 0; }
