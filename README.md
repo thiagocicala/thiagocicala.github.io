@@ -9,6 +9,7 @@ A publicação preserva a privacidade do atleta, menor de idade.
 - Perfil esportivo em português, espanhol e inglês.
 - Dados objetivos, trajetória e experiências confirmadas.
 - Três vídeos de melhores momentos.
+- Destaque trilíngue da semifinal do Campeonato Municipal de Louveira, com fotos e acesso ao vídeo do gol.
 - Contato administrado exclusivamente pelo responsável legal.
 
 Campos e documentos ainda não confirmados permanecem ocultos no site público.

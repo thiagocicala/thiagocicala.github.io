@@ -42,6 +42,27 @@ const translations = {
     videoThree: "Vídeo 03",
     highlightsName: "Mejores momentos — Thiago Cicala",
     openYoutube: "Abrir en YouTube ↗",
+    semifinalVideoLabel: "Semifinal",
+    semifinalVideoTitle: "Gol de la semifinal — Thiago Cicala",
+    semifinalIframeTitle: "Gol de Thiago Cicala en la semifinal del Campeonato Municipal de Louveira",
+    semifinalKicker: "Guarani — Campeonato Municipal de Louveira",
+    semifinalTitle: "Participación directa en la remontada",
+    semifinalDescription: "Thiago dio la asistencia para el gol del empate y marcó el gol de la remontada, contribuyendo a la clasificación de Guarani para la final.",
+    semifinalStatsLabel: "Indicadores de la semifinal",
+    semifinalAssist: "asistencia",
+    semifinalGoal: "gol",
+    semifinalQualification: "Clasificación para la final",
+    semifinalAltDuel: "Thiago Cicala disputando el balón en la semifinal del Campeonato Municipal de Louveira",
+    semifinalAltBall: "Thiago Cicala con el balón durante la semifinal con Guarani",
+    semifinalAltPortrait: "Retrato de Thiago Cicala en el campo con la camiseta de Guarani",
+    semifinalAltTeam: "Thiago Cicala con compañeros de Guarani después de clasificarse para la final",
+    semifinalCaptionDuel: "Disputa de balón en la semifinal",
+    semifinalCaptionBall: "Thiago con el balón",
+    semifinalCaptionPortrait: "Concentración en el campo",
+    semifinalCaptionTeam: "Después de clasificarse para la final",
+    semifinalVideoActionsLabel: "Vídeo de la semifinal",
+    watchSemifinalGoal: "Ver el gol de la semifinal",
+    openSemifinalYoutube: "Abrir en YouTube ↗",
     qualitiesKicker: "03 — Características",
     qualitiesTitle: "Perfil en el campo",
     technical: "Técnicas",
@@ -144,6 +165,27 @@ const translations = {
     videoThree: "Video 03",
     highlightsName: "Highlights — Thiago Cicala",
     openYoutube: "Open on YouTube ↗",
+    semifinalVideoLabel: "Semi-final",
+    semifinalVideoTitle: "Semi-final goal — Thiago Cicala",
+    semifinalIframeTitle: "Thiago Cicala's goal in the Louveira Municipal Championship semi-final",
+    semifinalKicker: "Guarani — Louveira Municipal Championship",
+    semifinalTitle: "Direct contribution to the comeback",
+    semifinalDescription: "Thiago provided the assist for the equaliser and scored the comeback goal, helping Guarani qualify for the final.",
+    semifinalStatsLabel: "Semi-final indicators",
+    semifinalAssist: "assist",
+    semifinalGoal: "goal",
+    semifinalQualification: "Qualification for the final",
+    semifinalAltDuel: "Thiago Cicala challenging for the ball in the Louveira Municipal Championship semi-final",
+    semifinalAltBall: "Thiago Cicala with the ball during the semi-final for Guarani",
+    semifinalAltPortrait: "Portrait of Thiago Cicala on the pitch wearing the Guarani shirt",
+    semifinalAltTeam: "Thiago Cicala with Guarani teammates after qualifying for the final",
+    semifinalCaptionDuel: "Challenging for the ball in the semi-final",
+    semifinalCaptionBall: "Thiago with the ball",
+    semifinalCaptionPortrait: "Focused on the pitch",
+    semifinalCaptionTeam: "After qualifying for the final",
+    semifinalVideoActionsLabel: "Semi-final video",
+    watchSemifinalGoal: "Watch the semi-final goal",
+    openSemifinalYoutube: "Open on YouTube ↗",
     qualitiesKicker: "03 — Characteristics",
     qualitiesTitle: "On-pitch profile",
     technical: "Technical",
@@ -236,6 +278,24 @@ function setLanguage(lang) {
     }
     if (!element.dataset.original) element.dataset.original = element.innerHTML;
     if (dictionary[key]) element.innerHTML = dictionary[key];
+  });
+
+  document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+    const key = element.dataset.i18nAlt;
+    if (!element.dataset.originalAlt) element.dataset.originalAlt = element.alt;
+    element.alt = lang === "pt" ? element.dataset.originalAlt : (dictionary[key] || element.dataset.originalAlt);
+  });
+
+  document.querySelectorAll("[data-i18n-aria]").forEach((element) => {
+    const key = element.dataset.i18nAria;
+    if (!element.dataset.originalAria) element.dataset.originalAria = element.getAttribute("aria-label") || "";
+    element.setAttribute("aria-label", lang === "pt" ? element.dataset.originalAria : (dictionary[key] || element.dataset.originalAria));
+  });
+
+  document.querySelectorAll("[data-i18n-title]").forEach((element) => {
+    const key = element.dataset.i18nTitle;
+    if (!element.dataset.originalTitle) element.dataset.originalTitle = element.title;
+    element.title = lang === "pt" ? element.dataset.originalTitle : (dictionary[key] || element.dataset.originalTitle);
   });
 
   languageButtons.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.lang === lang)));
